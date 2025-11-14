@@ -1,252 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Break the Beet Gallery - View our portfolio of beautifully crafted dishes and memorable events.">
-  <meta name="keywords" content="catering gallery, food photography, event portfolio, luxury catering photos">
-
-  <title>Gallery - Break the Beet | Culinary Portfolio</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Break the Beet Gallery - Portfolio of events and dishes">
+<title>Gallery - Break the Beet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navigation" role="navigation" aria-label="Main Navigation">
-    <div class="nav-container">
-      <a href="index.html" class="logo" aria-label="Break the Beet Home">BREAK THE BEET</a>
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">BREAK THE BEET</a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="chef.html">Meet the Chef</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
 
-      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="chef.html">Meet the Chef</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Get a Quote</a></li>
-      </ul>
+<section class="section" style="padding-top:120px">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-subtitle">Portfolio</p>
+      <h1>Gallery</h1>
+      <div class="divider"></div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Page Header -->
-  <section class="section" style="padding-top: 120px;">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-subtitle">Our Work</p>
-        <h1>Gallery</h1>
-        <div class="divider"></div>
-        <p style="max-width: 700px; margin: 2rem auto 0; text-align: center; font-size: 1.1rem;">
-          Explore our portfolio of exquisitely crafted dishes and memorable events. Each image represents our commitment to culinary excellence and attention to detail.
-        </p>
+<!-- GALLERY GRID - High-res image placeholders -->
+<section class="section">
+  <div class="container">
+    <div class="gallery-grid">
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 1</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 2</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 3</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 4</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 5</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 6</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 7</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 8</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 9</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 10</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 11</p>
+      </div>
+      <div class="gallery-item placeholder">
+        <p>High-Res Image Placeholder 12</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Gallery Grid -->
-  <section class="section">
-    <div class="container">
-      <div class="gallery-grid">
-
-        <!-- Gallery Item 1 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 1</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res event photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/event-01.jpg" alt="Break the Beet catered event"> -->
-        </div>
-
-        <!-- Gallery Item 2 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 2</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res dish photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/dish-01.jpg" alt="Gourmet dish presentation"> -->
-        </div>
-
-        <!-- Gallery Item 3 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 3</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res event photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/event-02.jpg" alt="Intimate gathering setup"> -->
-        </div>
-
-        <!-- Gallery Item 4 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 4</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res dish photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/dish-02.jpg" alt="Artfully plated cuisine"> -->
-        </div>
-
-        <!-- Gallery Item 5 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 5</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res event photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/event-03.jpg" alt="Private chef experience"> -->
-        </div>
-
-        <!-- Gallery Item 6 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 6</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res dish photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/dish-03.jpg" alt="Signature menu item"> -->
-        </div>
-
-        <!-- Gallery Item 7 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 7</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res event photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/event-04.jpg" alt="Elegant table setting"> -->
-        </div>
-
-        <!-- Gallery Item 8 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 8</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res dish photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/dish-04.jpg" alt="Culinary creation"> -->
-        </div>
-
-        <!-- Gallery Item 9 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 9</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res event photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/event-05.jpg" alt="Successful catered gathering"> -->
-        </div>
-
-        <!-- Gallery Item 10 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 10</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res dish photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/dish-05.jpg" alt="Exquisite plating detail"> -->
-        </div>
-
-        <!-- Gallery Item 11 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 11</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res event photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/event-06.jpg" alt="Memorable occasion"> -->
-        </div>
-
-        <!-- Gallery Item 12 -->
-        <div class="gallery-item">
-          <div class="gallery-placeholder">
-            <p>Image Placeholder 12</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">(High-res dish photo)</p>
-          </div>
-          <!-- When ready, replace with: <img src="images/gallery/dish-06.jpg" alt="Chef's specialty presentation"> -->
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Note Section -->
-  <section class="section section-alt">
-    <div class="container-narrow" style="text-align: center;">
-      <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Gallery Instructions</h3>
-      <p style="color: var(--color-gray); margin-bottom: 1rem;">
-        This gallery is designed to showcase high-resolution images of your events and dishes. Simply replace the placeholder elements with your actual images by updating the HTML comments provided in the code.
-      </p>
-      <p style="color: var(--color-gray); font-size: 0.95rem;">
-        Recommended image specifications: Minimum 1200px width, JPG or PNG format, optimized for web (under 500KB per image).
-      </p>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="section">
-    <div class="container-narrow" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Ready to Create Your Own Memorable Event?</h2>
-      <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">
-        Let's discuss how we can bring your culinary vision to life.
-      </p>
-      <a href="contact.html" class="btn btn-accent">Get a Quote</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>BREAK THE BEET</h3>
-          <p>Catering with Rhythm</p>
-          <p style="margin-top: 1rem;">Elevating intimate gatherings with exquisite culinary artistry and personalized service.</p>
-        </div>
-
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="services.html">Services</a>
-          <a href="chef.html">Meet the Chef</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact</a>
-        </div>
-
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: [Contact Email Placeholder]</p>
-          <p>Phone: [Contact Phone Placeholder]</p>
-          <p>Address: [Address Placeholder]</p>
-
-          <div class="social-links">
-            <a href="#" aria-label="Instagram" title="Instagram">
-              <span>IG</span>
-            </a>
-            <a href="#" aria-label="Facebook" title="Facebook">
-              <span>FB</span>
-            </a>
-            <a href="#" aria-label="Twitter" title="Twitter">
-              <span>TW</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 Break the Beet. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Sticky CTA -->
-  <div class="sticky-cta">
+<section class="section section-alt">
+  <div class="container-narrow" style="text-align:center">
+    <h2>[PLACEHOLDER: CTA heading]</h2>
+    <p style="margin:1rem 0 2rem">[PLACEHOLDER: CTA description]</p>
     <a href="contact.html" class="btn btn-accent">Get a Quote</a>
   </div>
+</section>
 
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>BREAK THE BEET</h3>
+        <p>Catering with Rhythm</p>
+        <p>[PLACEHOLDER: Footer description]</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="services.html">Services</a>
+        <a href="chef.html">Meet the Chef</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>[PLACEHOLDER: Email]</p>
+        <p>[PLACEHOLDER: Phone]</p>
+        <p>[PLACEHOLDER: Address]</p>
+        <div class="social-links">
+          <a href="[PLACEHOLDER: Instagram URL]" aria-label="Instagram">IG</a>
+          <a href="[PLACEHOLDER: Facebook URL]" aria-label="Facebook">FB</a>
+          <a href="[PLACEHOLDER: Twitter URL]" aria-label="Twitter">TW</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Break the Beet. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="contact.html" class="btn btn-accent">Get a Quote</a>
+</div>
+
+<script src="js/app.js"></script>
 </body>
 </html>

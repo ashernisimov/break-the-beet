@@ -1,243 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Break the Beet - Luxury catering with rhythm. Exquisite culinary experiences for intimate gatherings, customized menus, and private chef services.">
-  <meta name="keywords" content="luxury catering, private chef, customized menus, intimate gatherings, Break the Beet, gourmet catering">
-  <meta name="author" content="Break the Beet">
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Break the Beet - Catering with Rhythm">
-  <meta property="og:description" content="Exquisite luxury catering for intimate gatherings with customized menus and private chef experiences.">
-  <meta property="og:url" content="https://breakthebeet.com">
-
-  <title>Break the Beet - Catering with Rhythm | Luxury Private Chef & Catering Services</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Break the Beet - Catering with Rhythm. Luxury catering for intimate gatherings.">
+<title>Break the Beet - Catering with Rhythm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navigation" role="navigation" aria-label="Main Navigation">
-    <div class="nav-container">
-      <a href="index.html" class="logo" aria-label="Break the Beet Home">BREAK THE BEET</a>
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">BREAK THE BEET</a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="chef.html">Meet the Chef</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
 
-      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="chef.html">Meet the Chef</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Get a Quote</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero" role="banner">
-    <div class="hero-content">
-      <p class="hero-tagline">CATERING WITH RHYTHM</p>
-      <h1>Break the Beet</h1>
-      <p class="hero-description">
-        Elevating intimate gatherings with exquisite culinary artistry. Experience the perfect harmony of flavor, presentation, and personalized service.
-      </p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-accent">Get a Quote</a>
-        <a href="menu.html" class="btn btn-secondary">Explore Menu</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="section" id="about">
-    <div class="container-narrow">
-      <div class="section-header">
-        <p class="section-subtitle">Our Story</p>
-        <h2>Culinary Excellence, Personalized</h2>
-        <div class="divider"></div>
-      </div>
-
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; line-height: 1.8;">
-        At Break the Beet, we believe that exceptional food is more than sustenance—it's an experience. Our approach combines global culinary influences with meticulous attention to detail, creating memorable moments for your most important gatherings.
-      </p>
-
-      <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--color-gray);">
-        From intimate dinner parties to customized private chef experiences, we craft each menu to reflect your unique vision and the rhythm of your celebration.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services Preview -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-subtitle">What We Offer</p>
-        <h2>Our Services</h2>
-        <div class="divider"></div>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <span>🍽️</span>
-          </div>
-          <h3 class="service-title">Intimate Gatherings</h3>
-          <p class="service-description">
-            Catering designed for your most important intimate gatherings, where every detail matters.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <span>📋</span>
-          </div>
-          <h3 class="service-title">Customized Menus</h3>
-          <p class="service-description">
-            Personalized culinary experiences tailored to your preferences and dietary requirements.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <span>👨‍🍳</span>
-          </div>
-          <h3 class="service-title">Private Chef Experiences</h3>
-          <p class="service-description">
-            Exclusive in-home dining with a professional chef dedicated to your occasion.
-          </p>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="services.html" class="btn btn-primary">View All Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Menu Preview -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-subtitle">Culinary Artistry</p>
-        <h2>Featured Dishes</h2>
-        <div class="divider"></div>
-      </div>
-
-      <div class="menu-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 1000px; margin: 0 auto;">
-        <div class="menu-item">
-          <div class="menu-item-image">
-            <span>Image Placeholder</span>
-          </div>
-          <div class="menu-item-content">
-            <h3 class="menu-item-name">Mini Arepas</h3>
-            <p class="menu-item-description">Beef Stew & Queso Fresco</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-image">
-            <span>Image Placeholder</span>
-          </div>
-          <div class="menu-item-content">
-            <h3 class="menu-item-name">Crab Cake</h3>
-            <p class="menu-item-description">with Spicy Aioli</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <div class="menu-item-image">
-            <span>Image Placeholder</span>
-          </div>
-          <div class="menu-item-content">
-            <h3 class="menu-item-name">Yakitori Chicken Skewers</h3>
-            <p class="menu-item-description">Japanese-inspired grilled perfection</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="section section-alt">
-    <div class="container-narrow" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Ready to Plan Your Event?</h2>
-      <p style="font-size: 1.1rem; color: var(--color-gray); margin-bottom: 2rem;">
-        Let's create an unforgettable culinary experience for your next gathering.
-      </p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-tagline">CATERING WITH RHYTHM</p>
+    <h1>Break the Beet</h1>
+    <p class="hero-description">[PLACEHOLDER: Hero description/tagline]</p>
+    <div class="hero-cta">
       <a href="contact.html" class="btn btn-accent">Get a Quote</a>
+      <a href="menu.html" class="btn btn-secondary">Explore Menu</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>BREAK THE BEET</h3>
-          <p>Catering with Rhythm</p>
-          <p style="margin-top: 1rem;">Elevating intimate gatherings with exquisite culinary artistry and personalized service.</p>
-        </div>
+<!-- INTRO -->
+<section class="section">
+  <div class="container-narrow">
+    <div class="section-header">
+      <p class="section-subtitle">[PLACEHOLDER: Section subtitle]</p>
+      <h2>[PLACEHOLDER: Section heading]</h2>
+      <div class="divider"></div>
+    </div>
+    <p style="text-align:center">[PLACEHOLDER: Brand introduction text]</p>
+  </div>
+</section>
 
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="services.html">Services</a>
-          <a href="chef.html">Meet the Chef</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact</a>
-        </div>
-
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: [Contact Email Placeholder]</p>
-          <p>Phone: [Contact Phone Placeholder]</p>
-          <p>Address: [Address Placeholder]</p>
-
-          <div class="social-links">
-            <a href="#" aria-label="Instagram" title="Instagram">
-              <span>IG</span>
-            </a>
-            <a href="#" aria-label="Facebook" title="Facebook">
-              <span>FB</span>
-            </a>
-            <a href="#" aria-label="Twitter" title="Twitter">
-              <span>TW</span>
-            </a>
-          </div>
-        </div>
+<!-- SERVICES PREVIEW -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-subtitle">Services</p>
+      <h2>What We Offer</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid grid-2">
+      <div class="service-card">
+        <div class="service-icon">🍽️</div>
+        <h3 class="service-title">Catering for Intimate Gatherings</h3>
+        <p class="service-desc">[PLACEHOLDER: Service description]</p>
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 Break the Beet. All rights reserved.</p>
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3 class="service-title">Customized Menus</h3>
+        <p class="service-desc">[PLACEHOLDER: Service description]</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👨‍🍳</div>
+        <h3 class="service-title">Private Chef Experiences</h3>
+        <p class="service-desc">[PLACEHOLDER: Service description]</p>
       </div>
     </div>
-  </footer>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="services.html" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Sticky CTA -->
-  <div class="sticky-cta">
+<!-- MENU PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-subtitle">Menu</p>
+      <h2>Featured Dishes</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid grid-3">
+      <article class="menu-item">
+        <div class="menu-image placeholder">Image Placeholder</div>
+        <div class="menu-content">
+          <h3 class="menu-name">Mini Arepas</h3>
+          <p class="menu-desc">Beef Stew & Queso Fresco</p>
+        </div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-image placeholder">Image Placeholder</div>
+        <div class="menu-content">
+          <h3 class="menu-name">Crab Cake with Spicy Aioli</h3>
+          <p class="menu-desc">[PLACEHOLDER: Dish description]</p>
+        </div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-image placeholder">Image Placeholder</div>
+        <div class="menu-content">
+          <h3 class="menu-name">Yakitori Chicken Skewers</h3>
+          <p class="menu-desc">[PLACEHOLDER: Dish description]</p>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-alt">
+  <div class="container-narrow" style="text-align:center">
+    <h2>[PLACEHOLDER: CTA heading]</h2>
+    <p style="margin:1rem 0 2rem">[PLACEHOLDER: CTA description]</p>
     <a href="contact.html" class="btn btn-accent">Get a Quote</a>
   </div>
+</section>
 
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>BREAK THE BEET</h3>
+        <p>Catering with Rhythm</p>
+        <p>[PLACEHOLDER: Footer description]</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="services.html">Services</a>
+        <a href="chef.html">Meet the Chef</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>[PLACEHOLDER: Email]</p>
+        <p>[PLACEHOLDER: Phone]</p>
+        <p>[PLACEHOLDER: Address]</p>
+        <div class="social-links">
+          <a href="[PLACEHOLDER: Instagram URL]" aria-label="Instagram">IG</a>
+          <a href="[PLACEHOLDER: Facebook URL]" aria-label="Facebook">FB</a>
+          <a href="[PLACEHOLDER: Twitter URL]" aria-label="Twitter">TW</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Break the Beet. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <a href="contact.html" class="btn btn-accent">Get a Quote</a>
+</div>
+
+<script src="js/app.js"></script>
 </body>
 </html>
