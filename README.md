@@ -29,10 +29,12 @@ Multi-page luxury catering website with strict content control, optimized perfor
 ├── gallery.html            # Portfolio grid (12 images)
 ├── contact.html            # Multi-step form + testimonials
 ├── CONTENT-GUIDE.md        # Placeholder checklist
+├── DESIGN-SYSTEM.md        # Complete luxury design system docs
 ├── css/
-│   └── main.css            # Optimized styles (~15KB)
+│   ├── main.css            # Base styles (~15KB)
+│   └── luxury.css          # Luxury enhancements (Phase 2)
 ├── js/
-│   └── app.js              # Optimized JavaScript (~5KB)
+│   └── app.js              # Optimized JavaScript with scroll reveals (~5KB)
 └── images/                 # Professional asset management
     ├── chef/               # Chef photos
     ├── menu/               # 8 dish photos (800x800px)
@@ -213,77 +215,128 @@ Visit: `http://localhost:8000`
 
 ## 🎨 Design System
 
-### **Color Palette (Quiet Luxury)**
+### **Phase 2: Luxury NYC-Inspired Aesthetic** ✨
+
+The website now features a world-class luxury design inspired by NYC's top catering services (Great Performances, Pinch Food Design, Olivier Cheng).
+
+**What's New:**
+- 🎭 **Animated gradient hero** with 15s color-shift animation
+- ✨ **Scroll reveal animations** — sections fade in on scroll with staggered timing
+- 🏛️ **Art Deco dividers** — geometric patterns between major sections
+- 📐 **Doubled spacing** — generous whitespace for luxury breathing room
+- 🎨 **Expanded color palette** — gold variations, shadows, glows
+- 🖋️ **Dramatic typography** — increased letter-spacing, drop caps, pullquotes
+- 🎯 **Micro-animations** — subtle hover effects, pulse CTAs, floating elements
+- ♿ **Full accessibility** — respects `prefers-reduced-motion`, high contrast mode
+
+**Files:**
+- `css/luxury.css` — All luxury enhancements (supplements `main.css`)
+- `DESIGN-SYSTEM.md` — **Complete design system documentation**
+
+### **Color Palette (Luxury Expanded)**
 ```css
+/* Base Palette */
 --black: #000000          /* Primary text, headers */
 --white: #ffffff          /* Backgrounds */
 --charcoal: #2c2c2c       /* Secondary text */
 --gray: #6b6b6b           /* Body copy */
 --gray-light: #e8e8e8     /* Borders, dividers */
---gold: #b8956a           /* Accent, CTAs */
---copper: #c4936d         /* Accent hover states */
+
+/* Luxury Accents */
+--gold: #b8956a           /* Primary accent, CTAs */
+--gold-dark: #8b7355      /* Hover states, depth */
+--gold-light: #d4af37     /* Highlights, glows */
+--copper: #c4936d         /* Secondary accent */
+--warm-white: #faf9f6     /* Warm backgrounds */
+
+/* Shadows & Glows */
+--glow-gold: rgba(184, 149, 106, 0.15)
+--shadow-md: rgba(0, 0, 0, 0.08)
+--shadow-xl: rgba(0, 0, 0, 0.2)
 ```
 
 ### **Typography**
 - **Headings**: Playfair Display (serif) - elegant, sophisticated
 - **Body**: Inter (sans-serif) - clean, highly readable
-- **Responsive**: Fluid sizing with CSS `clamp()`
-- **Letter Spacing**: Refined for luxury feel
+- **Responsive**: Fluid sizing with CSS `clamp(3rem, 7vw, 6rem)` for h1
+- **Letter Spacing**: 0.05em on h1 for dramatic effect
+- **Features**: Drop caps, pullquotes, chef quotes
 
-### **Spacing Scale**
+### **Spacing Scale (DOUBLED for Luxury)**
 ```css
---s1: 0.5rem    /* 8px - tight spacing */
---s2: 1rem      /* 16px - default spacing */
---s3: 2rem      /* 32px - section padding */
---s4: 4rem      /* 64px - large sections */
---s5: 6rem      /* 96px - hero sections */
+--s1: 0.75rem   /* 12px - tight spacing */
+--s2: 1.5rem    /* 24px - default spacing */
+--s3: 3rem      /* 48px - section padding */
+--s4: 6rem      /* 96px - large sections */
+--s5: 9rem      /* 144px - hero sections */
+--s6: 12rem     /* 192px - extra large sections */
 ```
+
+**📖 See `DESIGN-SYSTEM.md` for complete documentation.**
 
 ---
 
 ## ✨ Key Features
 
-### **1. Fully Responsive**
+### **1. Luxury NYC-Inspired Design** ✨ *NEW*
+- **Animated gradient hero** — Dynamic background with 15s color shift
+- **Scroll reveal animations** — Sections fade in on scroll with Intersection Observer
+- **Art Deco dividers** — Geometric patterns reflecting NYC architectural heritage
+- **Doubled whitespace** — Generous breathing room for luxury feel
+- **Micro-animations** — Subtle hover effects, pulse CTAs, floating elements
+- **Enhanced typography** — Dramatic scale, drop caps, pullquotes
+- **Gold glow effects** — Sophisticated focus states and accents
+
+### **2. Fully Responsive**
 - Mobile-first design approach
-- Breakpoints: 480px, 768px, 1024px
+- Breakpoints: 480px, 768px, 1024px, 1440px
 - Flexible grid layouts
 - Touch-optimized navigation
+- Adaptive animations (reduced on mobile)
 
-### **2. Multi-Step Contact Form**
+### **3. Multi-Step Contact Form**
 - **Step 1**: Name, Email, Event Date
 - **Step 2**: Guest Count, Event Type, Detailed Message
 - Client-side validation
 - Conversion-optimized UX
+- Luxury form inputs with gold glow focus states
 - Clear error messaging
 
-### **3. Performance Optimized**
-- Minified CSS (~15KB)
+### **4. Performance Optimized**
+- Minified CSS (main.css + luxury.css)
 - Optimized JS (~5KB)
 - Lazy-loading images
 - No external dependencies
 - Fast page loads
+- GPU-accelerated animations (transform/opacity only)
+- Lighthouse Performance: 90+ target
 
-### **4. Accessibility (WCAG 2.1)**
+### **5. Accessibility (WCAG 2.1)**
 - Semantic HTML5
 - ARIA labels and roles
 - Keyboard navigation support
-- Focus visible states
+- Gold focus states with 3px outline
 - Screen reader optimized
 - Descriptive alt text
+- **Respects `prefers-reduced-motion`** — Disables animations if user prefers
+- **High contrast mode** support
 
-### **5. SEO Optimized**
+### **6. SEO Optimized**
 - Meta descriptions (all pages)
 - Semantic heading hierarchy
 - Mobile-friendly
 - Fast Core Web Vitals
 - Structured data ready
+- Optimized image sizes
 
-### **6. UI/UX Features**
-- Sticky CTA button (appears on scroll)
-- Smooth scroll animations
+### **7. UI/UX Features**
+- Sticky CTA button with pulse animation
+- Scroll reveal animations via Intersection Observer
 - Gallery lightbox
-- Hover state transitions
+- Hover state transitions with scale transforms
 - Mobile hamburger menu
+- Staggered animation delays for visual rhythm
+- Vignette overlays on menu items
 
 ---
 

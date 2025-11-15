@@ -38,10 +38,12 @@ const initNav=()=>{
     });
   }
 
-  // Sticky nav shadow
+  // Sticky nav shadow and scrolled state
   if(nav){
     window.onscroll=()=>{
-      nav.style.boxShadow=window.scrollY>100?'0 2px 10px rgba(0,0,0,.1)':'none';
+      const scrolled=window.scrollY>100;
+      nav.style.boxShadow=scrolled?'0 2px 10px rgba(0,0,0,.1)':'none';
+      nav.classList.toggle('scrolled',scrolled);
 
       // Show sticky CTA
       const stickyCTA=document.querySelector('.sticky-cta');
@@ -159,16 +161,27 @@ const initForm=()=>{
 
 // === SCROLL ANIMATIONS ===
 const initAnimations=()=>{
+  // Check for reduced motion preference
+  const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if(prefersReducedMotion){
+    // If user prefers reduced motion, make all reveals visible immediately
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+    return;
+  }
+
+  // Intersection Observer for scroll reveal animations
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
-        entry.target.classList.add('fade-in');
-        observer.unobserve(entry.target);
+        entry.target.classList.add('visible');
+        // Keep observing in case user scrolls back
       }
     });
-  },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+  },{threshold:0.15,rootMargin:'0px 0px -100px 0px'});
 
-  document.querySelectorAll('.menu-item,.service-card,.gallery-item,.chef-content,.section-header').forEach(el=>{
+  // Observe all elements with .reveal class
+  document.querySelectorAll('.reveal').forEach(el=>{
     observer.observe(el);
   });
 };
