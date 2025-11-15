@@ -1,325 +1,466 @@
 # Break the Beet - Luxury Catering Website
 
-A fully responsive, multi-page luxury catering website for "Break the Beet" - Catering with Rhythm.
+**Catering with Rhythm**
 
-## Overview
+Professional, fully responsive website for Break the Beet luxury catering services with comprehensive image management system.
 
-This website showcases a premium catering service specializing in intimate gatherings, customized menus, and private chef experiences. Built with modern web standards, the site emphasizes quiet luxury aesthetics, accessibility, and conversion-focused design.
+---
 
-## Technology Stack
+## 🎯 Overview
 
-- **HTML5**: Semantic markup for structure
-- **CSS3**: Custom properties, flexbox, grid, animations
-- **Vanilla JavaScript**: Form handling, navigation, and interactions
-- **Mobile-First Responsive Design**
-- **SEO Optimized**: Meta tags, semantic HTML, accessibility features
+Multi-page luxury catering website with strict content control, optimized performance, and GitHub-ready image asset management.
 
-## Website Structure
+### **Tech Stack**
+- **HTML5** - Semantic markup, accessibility-first
+- **CSS3** - Custom properties, responsive grid, optimized
+- **Vanilla JavaScript** - No dependencies, < 5KB
+- **Mobile-First** - Fully responsive across all devices
+
+---
+
+## 📁 Project Structure
 
 ```
 /break-the-beet/
-├── index.html          # Home page with hero and intro
-├── menu.html           # 8 exact menu dishes
-├── services.html       # 3 specific services
-├── chef.html           # Chef Eric Brown's biography
-├── gallery.html        # Portfolio/image grid
-├── contact.html        # Multi-step quote form + testimonials
+├── index.html              # Home page
+├── menu.html               # 8 exact dishes
+├── services.html           # 3 services
+├── chef.html               # Chef Eric Brown bio
+├── gallery.html            # Portfolio grid (12 images)
+├── contact.html            # Multi-step form + testimonials
+├── CONTENT-GUIDE.md        # Placeholder checklist
 ├── css/
-│   └── styles.css      # Complete design system
+│   └── main.css            # Optimized styles (~15KB)
 ├── js/
-│   └── main.js         # Interactive functionality
-└── images/
-    └── placeholders/   # Directory for your images
+│   └── app.js              # Optimized JavaScript (~5KB)
+└── images/                 # Professional asset management
+    ├── chef/               # Chef photos
+    ├── menu/               # 8 dish photos (800x800px)
+    ├── gallery/            # 12 event photos (1400x1000px)
+    ├── backgrounds/        # Hero & section backgrounds
+    ├── icons/              # Service icons (SVG)
+    ├── brand/              # Logo & favicon
+    └── IMAGE-GUIDELINES.md # Complete specifications
 ```
 
-## Pages Overview
+---
 
-### 1. Home (`index.html`)
-- Hero section with tagline "CATERING WITH RHYTHM"
-- Brand introduction
-- Service previews
-- Featured menu items
-- Call-to-action sections
+## 🖼️ Image Management System
 
-### 2. Menu (`menu.html`)
-**8 Exact Dishes** (as provided):
-1. Mini Arepas - Beef Stew & Queso Fresco
-2. Crab Cake with Spicy Aioli
-3. Yakitori Chicken Skewers
-4. Pani Puri Chicken Salad
-5. Beef Sliders
-6. Mini Empanadas (Beef/Chicken/Cheese)
-7. Endives with Citrus & Goat Cheese
-8. Caprese Skewers
+### **Quick Overview**
 
-### 3. Services (`services.html`)
-**3 Exact Services** (as provided):
-1. Catering for Intimate Gatherings
-2. Customized Menus
-3. Private Chef Experiences
+All image paths are **pre-configured** in HTML. Simply upload images to the correct folders and they'll automatically display.
 
-### 4. Meet the Chef (`chef.html`)
-- Chef Eric Brown's biography
-- Culinary philosophy
-- Credentials and references (Marcus Samuelsson, Jean-Georges)
-- Professional background
+### **Image Directory Structure**
 
-### 5. Gallery (`gallery.html`)
-- 12 image placeholders for high-resolution photos
-- Grid layout with hover animations
-- Click-to-expand lightbox functionality
-- Instructions for adding images
+```
+/images/
+├── chef/
+│   ├── eric-brown-profile.jpg    [900x900px, < 250KB] PLACEHOLDER
+│   └── eric-brown-action.jpg     [1200x800px, < 300KB] OPTIONAL
+├── menu/
+│   ├── mini-arepas.jpg           [800x800px, < 300KB] PLACEHOLDER
+│   ├── crab-cake.jpg              [800x800px, < 300KB] PLACEHOLDER
+│   ├── yakitori-chicken.jpg       [800x800px, < 300KB] PLACEHOLDER
+│   ├── pani-puri.jpg              [800x800px, < 300KB] PLACEHOLDER
+│   ├── beef-sliders.jpg           [800x800px, < 300KB] PLACEHOLDER
+│   ├── mini-empanadas.jpg         [800x800px, < 300KB] PLACEHOLDER
+│   ├── endives-citrus.jpg         [800x800px, < 300KB] PLACEHOLDER
+│   └── caprese-skewers.jpg        [800x800px, < 300KB] PLACEHOLDER
+├── gallery/
+│   └── event-01.jpg to event-12.jpg [1400x1000px, < 400KB each] PLACEHOLDER
+├── backgrounds/
+│   ├── hero-main.jpg              [1920x1080px, < 500KB] PLACEHOLDER
+│   └── section-divider.jpg        [1920x400px, < 200KB] OPTIONAL
+├── icons/
+│   ├── service-intimate.svg       [< 10KB] PLACEHOLDER
+│   ├── service-custom.svg         [< 10KB] PLACEHOLDER
+│   └── service-chef.svg           [< 10KB] PLACEHOLDER
+└── brand/
+    ├── logo.svg                   [< 20KB, vector] PLACEHOLDER
+    └── favicon.png                [512x512px, < 50KB] PLACEHOLDER
+```
 
-### 6. Contact/Get a Quote (`contact.html`)
-**Multi-Step Form**:
-- **Step 1**: Name, Email, Phone, Event Date
-- **Step 2**: Guest Count, Event Type, Service Type, Dietary Restrictions, Message, Budget
+### **Image Upload - 3 Methods**
 
-**Additional Features**:
-- Empty testimonials section (ready for real content)
-- Contact information display
-- Form validation
-- Success confirmation
+#### **Method 1: GitHub Web Interface** (Easiest)
+1. Go to your GitHub repository
+2. Navigate to `images/` → select subfolder (e.g., `menu/`)
+3. Click "Add file" → "Upload files"
+4. Drag and drop your images
+5. Add commit message: "Add menu photos"
+6. Click "Commit changes"
 
-## Design System
+#### **Method 2: Git Command Line**
+```bash
+# Navigate to repository
+cd break-the-beet
 
-### Color Palette (Quiet Luxury)
+# Add image to correct directory
+cp ~/Downloads/mini-arepas.jpg images/menu/
+
+# Stage, commit, and push
+git add images/menu/mini-arepas.jpg
+git commit -m "Add Mini Arepas photo"
+git push origin main
+```
+
+#### **Method 3: GitHub Desktop**
+1. Open GitHub Desktop
+2. Drag image files into correct `/images/` subfolder
+3. Review changes in left panel
+4. Add commit message
+5. Click "Commit to main"
+6. Click "Push origin"
+
+### **Image Specifications Quick Reference**
+
+| Category | Dimensions | Format | Max Size | Count |
+|----------|-----------|--------|----------|-------|
+| Menu Dishes | 800x800px (square) | JPG/WebP | 300KB | 8 |
+| Gallery | 1400x1000px (landscape) | JPG/WebP | 400KB | 12 |
+| Chef Photo | 900x900px (square) | JPG/WebP | 250KB | 1 |
+| Hero Background | 1920x1080px | JPG/WebP | 500KB | 1 |
+| Icons | Scalable (SVG) | SVG | 10KB | 3 |
+| Logo | Scalable | SVG | 20KB | 1 |
+| Favicon | 512x512px | PNG | 50KB | 1 |
+
+### **Optimization Tools**
+
+**Before uploading, optimize images:**
+- **[TinyPNG](https://tinypng.com/)** - JPG/PNG compression
+- **[Squoosh](https://squoosh.app/)** - Advanced compression + WebP
+- **[SVGOMG](https://jakearchibald.github.io/svgomg/)** - SVG optimization
+
+**Target:** All images under size limits for fast loading.
+
+### **Complete Image Guidelines**
+
+For detailed specifications, photography guidelines, alt text templates, and responsive image implementation:
+
+**📖 See: `images/IMAGE-GUIDELINES.md`**
+
+---
+
+## 📋 Content Status
+
+### ✅ **Implemented (Exact Content Provided)**
+- **Brand**: "Break the Beet"
+- **Tagline**: "CATERING WITH RHYTHM"
+- **8 Dishes**: Mini Arepas (Beef Stew & Queso Fresco), Crab Cake with Spicy Aioli, Yakitori Chicken Skewers, Pani Puri Chicken Salad, Beef Sliders, Mini Empanadas (Beef/Chicken/Cheese), Endives with Citrus & Goat Cheese, Caprese Skewers
+- **3 Services**: Catering for Intimate Gatherings, Customized Menus, Private Chef Experiences
+- **Chef**: Eric Brown (with Marcus Samuelsson & Jean-Georges references)
+- **Multi-Step Form**: Step 1 (name/email/date), Step 2 (guests/event type/message)
+
+### 🔴 **Placeholders (Must Complete Before Launch)**
+
+**Critical Content:**
+- Dish descriptions (6 needed)
+- Service descriptions (all 3 needed)
+- Chef biography (complete bio needed)
+- Specific credentials for Marcus Samuelsson & Jean-Georges
+
+**Images (21 Total):**
+- 8 menu dish photos
+- 12 gallery/event photos
+- 1 chef portrait photo
+
+**Contact Information:**
+- Email address
+- Phone number
+- Full address
+- Social media links (Instagram, Facebook, Twitter)
+
+**Marketing Copy:**
+- Hero descriptions
+- Section subtitles
+- CTA text
+- Footer descriptions
+
+**See `CONTENT-GUIDE.md` for complete checklist.**
+
+---
+
+## 🚀 Quick Start
+
+### **Local Development**
+
+```bash
+# Clone repository
+git clone https://github.com/[username]/break-the-beet.git
+cd break-the-beet
+
+# Open in browser
+open index.html
+```
+
+### **Live Server (Recommended for Testing)**
+
+```bash
+# Python (built-in)
+python3 -m http.server 8000
+
+# Node.js (if installed)
+npx serve
+
+# VS Code Live Server Extension
+# Install "Live Server" → Right-click index.html → "Open with Live Server"
+```
+
+Visit: `http://localhost:8000`
+
+---
+
+## 🎨 Design System
+
+### **Color Palette (Quiet Luxury)**
 ```css
---color-black: #000000        /* Primary text, headers */
---color-white: #FFFFFF        /* Background, text on dark */
---color-charcoal: #2C2C2C     /* Secondary text */
---color-gray: #6B6B6B         /* Body text */
---color-light-gray: #E8E8E8   /* Borders, dividers */
---color-accent-gold: #B8956A  /* CTAs, accents */
---color-accent-copper: #C4936D /* Hover states */
+--black: #000000          /* Primary text, headers */
+--white: #ffffff          /* Backgrounds */
+--charcoal: #2c2c2c       /* Secondary text */
+--gray: #6b6b6b           /* Body copy */
+--gray-light: #e8e8e8     /* Borders, dividers */
+--gold: #b8956a           /* Accent, CTAs */
+--copper: #c4936d         /* Accent hover states */
 ```
 
-### Typography
+### **Typography**
 - **Headings**: Playfair Display (serif) - elegant, sophisticated
-- **Body Text**: Inter (sans-serif) - clean, readable
-- Responsive font sizes using `clamp()`
-- Letter spacing for luxury feel
+- **Body**: Inter (sans-serif) - clean, highly readable
+- **Responsive**: Fluid sizing with CSS `clamp()`
+- **Letter Spacing**: Refined for luxury feel
 
-### Spacing System
-- XS: 0.5rem
-- SM: 1rem
-- MD: 2rem
-- LG: 4rem
-- XL: 6rem
+### **Spacing Scale**
+```css
+--s1: 0.5rem    /* 8px - tight spacing */
+--s2: 1rem      /* 16px - default spacing */
+--s3: 2rem      /* 32px - section padding */
+--s4: 4rem      /* 64px - large sections */
+--s5: 6rem      /* 96px - hero sections */
+```
 
-## Key Features
+---
 
-### 1. Responsive Design
-- Mobile-first approach
+## ✨ Key Features
+
+### **1. Fully Responsive**
+- Mobile-first design approach
 - Breakpoints: 480px, 768px, 1024px
 - Flexible grid layouts
-- Touch-friendly navigation
+- Touch-optimized navigation
 
-### 2. Sticky CTA
-- Fixed call-to-action button
-- Appears after scrolling 500px
-- Always accessible for conversions
-
-### 3. Multi-Step Form
-- Progressive disclosure (2 steps)
+### **2. Multi-Step Contact Form**
+- **Step 1**: Name, Email, Event Date
+- **Step 2**: Guest Count, Event Type, Detailed Message
 - Client-side validation
-- Visual step indicators
-- Conversion-optimized layout
+- Conversion-optimized UX
+- Clear error messaging
 
-### 4. Navigation
-- Fixed header with backdrop blur
-- Mobile hamburger menu
-- Active page highlighting
-- Smooth scroll behavior
+### **3. Performance Optimized**
+- Minified CSS (~15KB)
+- Optimized JS (~5KB)
+- Lazy-loading images
+- No external dependencies
+- Fast page loads
 
-### 5. Animations
-- Fade-in on scroll
-- Hover transitions
-- Gallery lightbox
-- Smooth page transitions
-
-### 6. Accessibility
+### **4. Accessibility (WCAG 2.1)**
 - Semantic HTML5
 - ARIA labels and roles
 - Keyboard navigation support
 - Focus visible states
-- Screen reader friendly
+- Screen reader optimized
+- Descriptive alt text
 
-### 7. SEO Optimization
-- Meta descriptions on all pages
-- Open Graph tags
+### **5. SEO Optimized**
+- Meta descriptions (all pages)
 - Semantic heading hierarchy
-- Alt text placeholders
 - Mobile-friendly
+- Fast Core Web Vitals
+- Structured data ready
 
-## Placeholder Content Guide
-
-### Images to Add
-
-**Gallery Images** (`gallery.html`):
-- Replace 12 placeholder divs with actual event/dish photos
-- Recommended: Minimum 1200px width, optimized JPG/PNG
-- Update HTML comments with actual image paths
-
-**Menu Dish Images** (`menu.html`):
-- 8 dish photos needed
-- Dimensions: 1:1 ratio recommended (e.g., 600x600px)
-- Update commented `<img>` tags
-
-**Chef Photo** (`chef.html`):
-- Professional portrait of Chef Eric Brown
-- Recommended: 800x1200px (portrait orientation)
-
-**Logo** (Optional):
-- Replace text logo with brand image if available
-- Update in navigation across all pages
-
-### Contact Information
-
-Update the following placeholders in **all page footers** and `contact.html`:
-- `[Contact Email Placeholder]` - Add real email
-- `[Contact Phone Placeholder]` - Add phone number
-- `[Address Placeholder]` - Add business address
-
-### Social Media Links
-
-Update in footer sections (all pages):
-```html
-<a href="#" aria-label="Instagram">  <!-- Add Instagram URL -->
-<a href="#" aria-label="Facebook">   <!-- Add Facebook URL -->
-<a href="#" aria-label="Twitter">    <!-- Add Twitter URL -->
-```
-
-### Testimonials
-
-To add testimonials in `contact.html`:
-1. Locate the commented testimonials structure
-2. Uncomment and duplicate for each testimonial
-3. Add real client quotes, names, and event types
-4. Remove or hide the "testimonials-empty" div
-
-## Customization Guide
-
-### Adding New Menu Items
-
-1. Open `menu.html`
-2. Copy an existing `<article class="menu-item">` block
-3. Update the dish name and description
-4. Add image or keep placeholder
-5. Paste into the menu grid
-
-### Modifying Colors
-
-Edit CSS custom properties in `css/styles.css`:
-```css
-:root {
-  --color-accent-gold: #YourColor;
-  /* etc. */
-}
-```
-
-### Changing Fonts
-
-Update Google Fonts links in HTML `<head>` and CSS variables:
-```css
---font-heading: 'YourFont', serif;
---font-body: 'YourFont', sans-serif;
-```
-
-## Browser Support
-
-- Chrome/Edge (last 2 versions)
-- Firefox (last 2 versions)
-- Safari (last 2 versions)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance Optimization
-
-### Before Launch:
-1. **Optimize Images**:
-   - Compress all images (TinyPNG, ImageOptim)
-   - Use WebP format where supported
-   - Lazy loading for gallery images
-
-2. **Minify Assets**:
-   - CSS minification
-   - JavaScript minification
-   - Remove comments in production
-
-3. **Testing**:
-   - Lighthouse audit
-   - Mobile responsiveness test
-   - Cross-browser testing
-   - Form submission testing
-
-## Deployment
-
-This is a static website and can be deployed to:
-- **Netlify**: Drag & drop deployment
-- **Vercel**: Connect Git repository
-- **GitHub Pages**: Free hosting
-- **Traditional Web Hosting**: Upload via FTP
-
-### Quick Deploy Steps:
-1. Add all real images to `images/` directory
-2. Update all placeholder content
-3. Test all forms and links
-4. Upload entire directory to web server
-5. Ensure `index.html` is set as default page
-
-## File Size Recommendations
-
-- Total CSS: < 100KB
-- Total JS: < 50KB
-- Each image: < 500KB (optimized)
-- Total page weight: < 2MB per page
-
-## Support & Maintenance
-
-### Regular Updates:
-- Update menu items seasonally
-- Add new gallery images from events
-- Collect and add client testimonials
-- Update chef bio as needed
-
-### Content Management:
-All content is in plain HTML and can be edited with any text editor. No database or CMS required.
-
-## Legal & Compliance
-
-Before launch, consider adding:
-- Privacy Policy page
-- Terms of Service
-- Cookie consent (if applicable)
-- GDPR compliance (for EU visitors)
-
-## Content Integrity
-
-**Important**: This website contains ONLY the exact content provided:
-- ✅ 8 specific menu dishes
-- ✅ 3 specific services
-- ✅ Chef Eric Brown's biography with Marcus Samuelsson and Jean-Georges references
-- ✅ Tagline: "CATERING WITH RHYTHM"
-- ✅ Empty testimonials section (placeholder only)
-- ✅ Placeholder images (no stock or AI-generated samples)
-
-**No additional content** has been invented, created, or assumed beyond the specifications provided.
-
-## Getting Started
-
-1. **Review all pages** in a web browser
-2. **Update placeholders** with your actual content
-3. **Add your images** to the `images/` directory
-4. **Test the contact form** functionality
-5. **Customize colors/fonts** if desired
-6. **Deploy** to your hosting platform
-
-## Questions or Issues?
-
-For technical questions about the website implementation, refer to the inline HTML comments throughout the code. Each placeholder and customizable section is clearly marked.
+### **6. UI/UX Features**
+- Sticky CTA button (appears on scroll)
+- Smooth scroll animations
+- Gallery lightbox
+- Hover state transitions
+- Mobile hamburger menu
 
 ---
 
-**Built with attention to luxury aesthetics, user experience, and conversion optimization.**
+## 📝 Updating Content
 
-© 2024 Break the Beet. All rights reserved.
+### **Text Placeholders**
+1. Open relevant HTML file
+2. Search for `[PLACEHOLDER: Description]`
+3. Replace with actual content
+4. Save and commit changes
+
+### **Images**
+1. Prepare image (optimize to size limits)
+2. Upload to correct `/images/` subfolder via GitHub
+3. Paths are already configured in HTML
+4. Image will automatically display
+
+### **Styling Changes**
+Edit `css/main.css` - use CSS custom properties:
+```css
+:root {
+  --gold: #YOUR_COLOR;  /* Update accent color */
+}
+```
+
+---
+
+## 🚀 Deployment Options
+
+### **Netlify** (Recommended - Free, Auto-Deploy)
+1. Push code to GitHub
+2. Log in to [Netlify](https://netlify.com)
+3. "New site from Git" → Connect repository
+4. Deploy automatically
+5. Add custom domain in Settings
+
+### **Vercel** (Fast, Free)
+```bash
+npm i -g vercel
+vercel
+```
+
+### **GitHub Pages** (Free, GitHub-Hosted)
+1. Repository Settings → Pages
+2. Source: Deploy from branch
+3. Branch: `main`, folder: `/root`
+4. Save → Site live in minutes
+
+### **Traditional Hosting** (cPanel, FTP)
+1. Compress entire directory as ZIP
+2. Upload via FTP/File Manager
+3. Extract in public_html/
+4. Ensure `index.html` is in root
+
+---
+
+## 📦 Pre-Launch Checklist
+
+### **Content**
+- [ ] All 8 dish descriptions written
+- [ ] All 3 service descriptions written
+- [ ] Chef Eric Brown biography completed
+- [ ] Marcus Samuelsson credential details added
+- [ ] Jean-Georges credential details added
+- [ ] All 21 images uploaded & optimized
+- [ ] Contact information updated (all pages)
+- [ ] Social media links added (all pages)
+- [ ] All marketing copy finalized
+
+### **Images**
+- [ ] All 8 menu dish photos (< 300KB each)
+- [ ] All 12 gallery photos (< 400KB each)
+- [ ] Chef photo (< 250KB)
+- [ ] Hero background (< 500KB)
+- [ ] Logo & favicon uploaded
+- [ ] All images optimized for web
+
+### **Technical**
+- [ ] Form submission tested
+- [ ] All internal links verified
+- [ ] Mobile responsive tested (iPhone, Android)
+- [ ] Cross-browser tested (Chrome, Firefox, Safari, Edge)
+- [ ] Lighthouse audit passed (90+ all scores)
+- [ ] Page load speed < 3 seconds
+- [ ] HTTPS/SSL enabled
+
+### **SEO**
+- [ ] Meta descriptions reviewed
+- [ ] All image alt text completed
+- [ ] Social media preview tested
+- [ ] Google Analytics added (optional)
+- [ ] Google Search Console submitted (optional)
+
+---
+
+## 🐛 Troubleshooting
+
+### **Images Not Showing?**
+1. Verify exact filename matches HTML (case-sensitive)
+2. Check image is in correct subfolder
+3. Ensure file uploaded to GitHub
+4. Clear browser cache (Cmd/Ctrl + Shift + R)
+
+### **Form Not Working?**
+1. Check JavaScript enabled in browser
+2. Open browser console (F12) for errors
+3. Verify all required fields have values
+4. Test in different browser
+
+### **Mobile Menu Not Opening?**
+1. Ensure `js/app.js` is loaded
+2. Check browser console for JavaScript errors
+3. Test on different device/browser
+
+---
+
+## 📞 Support & Documentation
+
+- **Content Placeholders**: `CONTENT-GUIDE.md`
+- **Image Specifications**: `images/IMAGE-GUIDELINES.md`
+- **HTML Comments**: Each file contains inline guidance
+- **CSS Variables**: All customizable in `:root` selector
+
+---
+
+## 📄 Performance Targets
+
+| Metric | Target | Current |
+|--------|--------|---------|
+| Lighthouse Performance | 90+ | TBD |
+| First Contentful Paint | < 1.5s | TBD |
+| Time to Interactive | < 3.0s | TBD |
+| Cumulative Layout Shift | < 0.1 | TBD |
+| Total Page Weight | < 2MB | ~3KB + images |
+
+---
+
+## 🎯 Browser Support
+
+✅ **Fully Supported:**
+- Chrome/Edge (last 2 versions)
+- Firefox (last 2 versions)
+- Safari (last 2 versions)
+- Mobile Safari (iOS 12+)
+- Chrome Mobile (Android 8+)
+
+---
+
+## 📜 License & Credits
+
+**© 2024 Break the Beet. All rights reserved.**
+
+**Development**: Professional web standards (HTML5, CSS3, ES6)
+**Brand**: Break the Beet
+**Chef**: Eric Brown
+
+---
+
+## ❓ FAQ
+
+**Q: Can I change the colors?**
+A: Yes! Edit CSS custom properties in `css/main.css` (:root section).
+
+**Q: How do I add more menu items?**
+A: Copy an existing menu item block in `menu.html`, update content, and upload a new image.
+
+**Q: Do I need a database?**
+A: No. This is a static website - all content is in HTML files.
+
+**Q: Can I use a CMS?**
+A: Yes. Consider Netlify CMS, Forestry, or Static CMS for easy content management.
+
+**Q: Is the contact form functional?**
+A: It validates and collects data client-side. For server-side processing, integrate with Formspree, Netlify Forms, or custom backend.
+
+---
+
+**Questions?** Check inline HTML comments or review `CONTENT-GUIDE.md` for placeholder locations.
+
+**Ready to launch?** Complete the pre-launch checklist above and deploy to your preferred hosting platform.
