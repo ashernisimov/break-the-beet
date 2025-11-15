@@ -26,8 +26,20 @@
   --shadow-sm: rgba(0, 0, 0, 0.04);
   --shadow-md: rgba(0, 0, 0, 0.08);
   --shadow-lg: rgba(0, 0, 0, 0.12);
+  --shadow-xl: rgba(0, 0, 0, 0.2);
   --glow-gold: rgba(184, 149, 106, 0.15);
+  --glow-gold-strong: rgba(184, 149, 106, 0.4);
   --overlay-dark: rgba(0, 0, 0, 0.75);
+
+  /* Pop Art Fusion Colors (Strategic accents - 20% usage) */
+  --pop-red: #FF6B6B;
+  --pop-yellow: #FFD93D;
+  --pop-cyan: #6BCF7F;
+  --pop-magenta: #E05297;
+  --pop-red-subtle: rgba(255, 107, 107, 0.6);
+  --pop-yellow-subtle: rgba(255, 217, 61, 0.6);
+  --pop-cyan-subtle: rgba(107, 207, 127, 0.6);
+  --pop-magenta-subtle: rgba(224, 82, 151, 0.6);
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -1335,6 +1347,332 @@ p {
 
   .service-card {
     padding: var(--s4) var(--s3);
+  }
+}
+
+/* ==========================================
+   POP ART FUSION - PHASE 2.5
+   Dynamic Backgrounds + Bold Contemporary Elements
+   "Luxury Catering meets Contemporary Art Gallery"
+   ========================================== */
+
+/* === DYNAMIC BACKGROUND ELEMENTS === */
+
+/* Floating bubbles for hero */
+.floating-bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-bubbles::before,
+.floating-bubbles::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  animation: floatBubbles 20s ease-in-out infinite;
+}
+
+.floating-bubbles::before {
+  top: 30%;
+  left: 20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at 30% 30%, var(--pop-yellow-subtle) 0%, transparent 50%);
+  animation-delay: -5s;
+}
+
+.floating-bubbles::after {
+  bottom: 20%;
+  right: 15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 70% 70%, var(--pop-cyan-subtle) 0%, transparent 50%);
+  animation-delay: -10s;
+}
+
+@keyframes floatBubbles {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.08);
+    opacity: 0.5;
+  }
+}
+
+/* === HALFTONE PATTERNS (Pop Art Reference) === */
+
+/* Halftone background - subtle dot pattern */
+.halftone-bg {
+  position: relative;
+}
+
+.halftone-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--gold) 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Halftone accent for specific elements */
+.halftone-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+.halftone-accent::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(circle, var(--pop-red) 2px, transparent 2px);
+  background-size: 10px 10px;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-smooth);
+  z-index: 1;
+}
+
+.halftone-accent:hover::after {
+  opacity: 0.15;
+}
+
+/* === POP ART ANIMATIONS === */
+
+@keyframes popScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% {
+    filter: hue-rotate(10deg) brightness(1.1);
+  }
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(15px, -15px) rotate(8deg);
+  }
+  66% {
+    transform: translate(-15px, 15px) rotate(-8deg);
+  }
+}
+
+/* Geometric shape animation */
+.geometric-shape {
+  position: absolute;
+  opacity: 0.12;
+  animation: floatShape 30s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* === POP ART ENHANCED CTAs === */
+
+/* Enhanced button with Pop Art hover effects */
+.btn-accent {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  transition: all 0.4s var(--ease-smooth);
+}
+
+.btn-accent::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--pop-red-subtle), transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-accent:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-accent:hover {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--pop-red) 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 30px var(--pop-red-subtle);
+}
+
+/* === POP ART MENU ITEMS === */
+
+/* Featured menu items with pop color accents */
+.menu-item.featured {
+  position: relative;
+}
+
+.menu-item.featured::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg,
+    var(--pop-cyan-subtle),
+    var(--pop-yellow-subtle),
+    var(--pop-magenta-subtle)
+  );
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-smooth);
+  z-index: -1;
+}
+
+.menu-item.featured:hover::before {
+  opacity: 1;
+}
+
+/* Comic book style outline on hover */
+.gallery-item {
+  position: relative;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.gallery-item:hover {
+  filter: contrast(1.1);
+}
+
+.gallery-item:hover img {
+  box-shadow:
+    0 0 0 3px var(--black),
+    0 0 0 6px var(--pop-cyan),
+    0 20px 60px var(--shadow-xl);
+}
+
+/* === WARHOL-STYLE LAYERED TEXT === */
+
+.pop-quote {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--black);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  text-shadow:
+    2px 2px 0 var(--pop-yellow),
+    4px 4px 0 var(--gold),
+    6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* === GEOMETRIC DECORATIVE SHAPES === */
+
+.shape-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pop-cyan-subtle), var(--pop-yellow-subtle));
+  position: absolute;
+  filter: blur(40px);
+}
+
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 173px solid var(--pop-magenta-subtle);
+  position: absolute;
+  filter: blur(30px);
+}
+
+/* === SECTION-SPECIFIC POP ART BACKGROUNDS === */
+
+/* Menu page - subtle halftone */
+.menu-page {
+  background:
+    radial-gradient(circle at 20% 80%, var(--pop-yellow-subtle) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, var(--pop-cyan-subtle) 0%, transparent 40%),
+    var(--warm-white);
+}
+
+/* Gallery page - animated mesh */
+.gallery-page {
+  background:
+    linear-gradient(120deg, transparent 0%, var(--pop-magenta-subtle) 50%, transparent 100%);
+  background-size: 200% 200%;
+  animation: gradientMesh 20s ease infinite;
+}
+
+@keyframes gradientMesh {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Services page - geometric shapes */
+.services-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-page::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--pop-cyan-subtle) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatShape 25s ease-in-out infinite;
+}
+
+/* === POP ART DIVIDER ENHANCEMENTS === */
+
+.deco-divider.pop {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--pop-cyan) 20%,
+    var(--pop-yellow) 40%,
+    var(--gold) 50%,
+    var(--pop-yellow) 60%,
+    var(--pop-cyan) 80%,
+    transparent
+  );
+  height: 4px;
+  animation: colorShift 10s ease infinite;
+}
+
+@keyframes colorShift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(15deg);
   }
 }
 

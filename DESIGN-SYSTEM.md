@@ -233,6 +233,238 @@ caps:  0.1em    /* Wide spacing for uppercase */
 
 ---
 
+## 🎨 Pop Art Fusion - Phase 2.5
+
+**"Luxury Catering meets Contemporary Art Gallery"**
+
+Strategic integration of bold Pop Art elements (20% visual weight) with luxury aesthetic (80% foundation). Inspired by Warhol, Lichtenstein, and NYC contemporary art scene.
+
+### Pop Art Color Palette
+
+```css
+/* Pop Art Accent Colors - Use Strategically */
+--pop-red: #FF6B6B;           /* Warhol red for CTAs */
+--pop-yellow: #FFD93D;        /* Bright sunshine accent */
+--pop-cyan: #6BCF7F;          /* Fresh green highlight */
+--pop-magenta: #E05297;       /* Bold pink accent */
+
+/* Subtle Variations (60% opacity) */
+--pop-red-subtle: rgba(255, 107, 107, 0.6);
+--pop-yellow-subtle: rgba(255, 217, 61, 0.6);
+--pop-cyan-subtle: rgba(107, 207, 127, 0.6);
+--pop-magenta-subtle: rgba(224, 82, 151, 0.6);
+```
+
+**Usage Rules:**
+- Pop colors for **hover states** and **interactive elements only**
+- Always at reduced opacity for backgrounds (0.3-0.6)
+- Never use for primary text or large blocks
+- Maximum 20% of any page's visual weight
+
+### Dynamic Background Elements
+
+#### Floating Bubbles
+```html
+<section class="hero">
+  <div class="floating-bubbles"></div>
+  <!-- Creates animated gradient orbs with 20s float animation -->
+</section>
+```
+
+**Effect:** Subtle yellow and cyan gradient bubbles float slowly across hero section
+
+#### Halftone Patterns
+```html
+<!-- Subtle dot pattern background (Lichtenstein reference) -->
+<section class="section halftone-bg">
+  <!-- Content -->
+</section>
+```
+
+**Effect:** 12px grid of gold dots at 8% opacity creates texture without distraction
+
+### Pop Art Animations
+
+#### Pop Scale
+```css
+@keyframes popScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+```
+**Usage:** Buttons, featured menu items on hover
+
+#### Color Pulse
+```css
+@keyframes colorPulse {
+  0%, 100% { filter: hue-rotate(0deg) brightness(1); }
+  50% { filter: hue-rotate(10deg) brightness(1.1); }
+}
+```
+**Usage:** Pop Art dividers, accent elements
+
+#### Float Shape
+```css
+@keyframes floatShape {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(15px, -15px) rotate(8deg); }
+  66% { transform: translate(-15px, 15px) rotate(-8deg); }
+}
+```
+**Usage:** Decorative geometric SVG shapes (30s duration)
+
+### Enhanced CTA Buttons
+
+```css
+.btn-accent:hover {
+  background: linear-gradient(135deg,
+    var(--gold-light) 0%,
+    var(--pop-red) 100%
+  );
+  box-shadow: 0 10px 30px var(--pop-red-subtle);
+}
+```
+
+**Effect:** Gold button transitions to gold-red gradient with pop color glow
+
+### Featured Menu Items
+
+```html
+<article class="menu-item featured">
+  <!-- Dish content -->
+</article>
+```
+
+**Effect:** On hover, colorful gradient border appears (cyan → yellow → magenta)
+
+### Gallery Comic Book Outlines
+
+```css
+.gallery-item:hover img {
+  box-shadow:
+    0 0 0 3px var(--black),
+    0 0 0 6px var(--pop-cyan),
+    0 20px 60px var(--shadow-xl);
+}
+```
+
+**Effect:** Comic book style double outline with pop cyan accent
+
+### Warhol-Style Layered Text
+
+```html
+<h2 class="pop-quote">BOLD STATEMENT</h2>
+```
+
+```css
+.pop-quote {
+  text-shadow:
+    2px 2px 0 var(--pop-yellow),
+    4px 4px 0 var(--gold),
+    6px 6px 10px rgba(0, 0, 0, 0.3);
+}
+```
+
+**Effect:** Triple-layer shadow (yellow/gold/black) for dramatic pop art typography
+
+### Geometric Decorative Shapes
+
+```html
+<!-- Animated floating circle -->
+<svg class="geometric-shape" style="top: 10%; left: 5%;" width="150" height="150">
+  <circle cx="75" cy="75" r="70" fill="url(#popGradient1)" opacity="0.3"/>
+  <defs>
+    <linearGradient id="popGradient1">
+      <stop offset="0%" style="stop-color:#6BCF7F;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFD93D;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+</svg>
+```
+
+**Effect:** Subtle gradient shapes float and rotate slowly (30s loop)
+
+### Page-Specific Backgrounds
+
+#### Menu Page
+```html
+<body class="menu-page">
+```
+- Dual radial gradients (yellow bottom-left, cyan top-right)
+- Subtle halftone dot pattern
+- 40% transparency for sophistication
+
+#### Gallery Page
+```html
+<body class="gallery-page">
+```
+- Animated gradient mesh (20s loop)
+- Magenta accent moves across background
+- Creates dynamic, contemporary feel
+
+#### Services Page
+```html
+<body class="services-page">
+```
+- Floating cyan gradient circle (top-right)
+- Decorative SVG shapes with 25s animation
+- Clean, professional with subtle movement
+
+### Pop Art Dividers
+
+```html
+<!-- Colorful animated divider -->
+<div class="deco-divider pop"></div>
+```
+
+**Effect:** Multi-color gradient bar (cyan → yellow → gold → yellow → cyan) with subtle hue rotation
+
+### Implementation Examples
+
+**Subtle Pop Art Touch (Recommended):**
+```html
+<section class="section halftone-bg">
+  <div class="container">
+    <article class="menu-item featured">
+      <img src="..." alt="..." />
+      <h3>Dish Name</h3>
+    </article>
+  </div>
+</section>
+```
+
+**Bold Pop Art Accent:**
+```html
+<section class="hero">
+  <div class="floating-bubbles"></div>
+  <h1 class="pop-quote">BREAK THE BEET</h1>
+  <a href="#" class="btn btn-accent">Get a Quote</a>
+</section>
+```
+
+### Balance Guidelines
+
+| Element | Luxury % | Pop Art % |
+|---------|----------|-----------|
+| Overall Design | 80% | 20% |
+| Color Palette | Gold/Black/White dominant | Pop colors on hover only |
+| Typography | Serif elegant | Pop quote for 1-2 headlines max |
+| Backgrounds | Subtle gradients | Floating elements, halftone at low opacity |
+| Animations | Smooth, refined | Bold on interaction only |
+
+**Golden Rule:** Pop Art elements should **enhance**, not **overwhelm** the luxury foundation.
+
+### Performance Considerations
+
+- All Pop Art animations use GPU-accelerated properties (`transform`, `opacity`, `filter`)
+- SVG shapes are vector (tiny file size)
+- CSS gradients instead of images (zero HTTP requests)
+- Halftone patterns are pure CSS (no texture files)
+- Respects `prefers-reduced-motion` — all animations disabled if user prefers
+
+---
+
 ## 🧩 Component Patterns
 
 ### Navigation
